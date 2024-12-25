@@ -1,0 +1,828 @@
+{
+  "properties": [
+    {
+      "pageTitle": "Krisumi",
+      "meta": {
+        "description": "Explore Krisumi, a premium residential project in Mumbai. Discover project highlights, amenities, configurations, and get in touch for more details.",
+        "keywords": [
+          "Lodha Group",
+          "Gurugram",
+          "Haryana",
+          "Residential Property",
+          "Real Estate",
+          "Flats for Sale"
+        ]
+      },
+      "header": {
+        "mainImage": "./project images/krusumi.jpg",
+        "title": "Krisumi",
+
+        "location": "Guruguram,Haryana"
+      },
+      "propertyGallery": {
+        "mainImage": "./project images/krusumi.jpg",
+        "additionalImages": [
+          "./project images/kri2.jpg",
+          "./project images/kri3.jpg",
+          
+          {
+            "image": "./project images/kri4.webp",
+            "overlayText": ""
+          },
+          {
+            "image": "./project images/kri5.jpg",
+            "overlayText": ""
+          }
+        ]
+      },
+      "buttons": [
+        { "text": "Shortlist", "icon": "fas fa-heart" },
+        { "text": "Share", "icon": "fas fa-share-alt" }
+      ],
+      "badges": [
+        { "text": "SY", "type": "exclusive" },
+        { "text": "Exclusive", "type": "exclusive" },
+        { "text": "Square Assured", "type": "assured" },
+        { "text": "RERA Registered", "type": "rera" },
+        { "text": "Residential", "type": "residential" }
+      ],
+      "navigation": [
+        { "label": "About", "link": "#project-about" },
+        { "label": "Overview", "link": "#overview" },
+        { "label": "Amenities", "link": "#amenities" },
+        { "label": "Configurations", "link": "#configurations" },
+        { "label": "Contact Us", "link": "#contact" }
+      ],
+      "projectAbout": {
+        "title": "About Krisumi",
+        "description": " Krisumi  The project is currently in a new launch stage with various configurations available.",
+        "moreInfoLink": "#",
+        "questionBox": {
+          "text": "What's on your mind? Ask and get answers from our Property Experts",
+          "buttonText": "Ask Question"
+        },
+        "tabs": [
+          {
+            "title": "Project Overview",
+            "content": "Experience luxury living with our 36,000 sq ft clubhouse featuring world-class amenities, surrounded by a 220-acre green zone. Each tower offers quick access with 7 elevators including shuttle services, complemented by 100% power backup for uninterrupted comfort.",
+            "button": { "text": "More About Krisumi", "link": "#" }
+          },
+          {
+            "title": "Price List",
+            "table": [
+              { "unitType": "1 BHK Apartment ", "area": "921 -1181 Sq.ft(Carpet Area) ","price": "₹ 2.17 - 2.36 Cr" },
+                            { "unitType": "  1 BHK Apartment Super Built-up Area", "area": "979 Sq. Ft", "price": "₹ 1.81 - 1.96 Cr" },
+                            { "unitType": " 1 BHK Apartment Super Built-up Area ", "area": "1181 Sq. Ft", "price": "₹ 2.18 -2.36 Cr" },
+              { "unitType": "1 BHK Apartment ", "area": "1448-1955 Sq. Ft. (Carpet Area)", "price": "₹ 2.9 - 5.96 Cr" },
+              { "unitType": "2 BHK Apartment", "area": "956 - 1080 sq.Ft(Carpet Area)", "price": "₹ 4.10 - 4.71 Cr " },
+              { "unitType": "3 BHK Apartment", "area": "1940 - 4480 sq.Ft (Carpet Area)", "price": "₹ 3.80 - 12.48 Cr" },
+              { "unitType": "4 BHK Apartment", "area": "2890 - 3291 sq.Ft (Carpet Area)", "price": "₹ 8.86 -17.56 Cr" }
+            ]
+          }
+        ]
+      },
+      "projectOverview": {
+        "status": "Ready to Move",
+        "unitSizes": "940 Sq. Ft to 2700 Sq. Ft",
+        "totalUnits": 1200,
+        "launchDate": "Ask for Details",
+        "locality": {
+          "name": " Sector 36A Gurugram",
+          "link": "#"
+        },
+        "configurations": " 1,2, 3, 4 LDK",
+        "builder": {
+          "name": "Krisumi Corporation",
+          "link": "#"
+        },
+        "projectSize": "35 Acres",
+        "completionDate": "Dec 2029",
+        "locationAdvantages": {
+          "name": "Dwarka Expressway (3.4 km) Vatika Business (4.6km)",
+          "link": "#"
+        }
+      },
+      "amenities": [
+        { "name": "Swimming Pool", "icon": "fas fa-swimming-pool" },
+        { "name": "Gymnasium", "icon": "fas fa-dumbbell" },
+        { "name": "Garden Area", "icon": "fas fa-park" },
+        { "name": "24/7 Security", "icon": "fas fa-shield-alt" },
+        { "name": "Children's Play Area", "icon": "fas fa-play-circle" },
+        { "name": "Community Hall", "icon": "fas fa-store" }
+      ],
+      "footer": {
+        "copyright": "© 2024 K Primus Infra Tech Ltd. All rights reserved.",
+        "socialLinks": [
+          { "platform": "Facebook", "icon": "fab fa-facebook", "link": "#" },
+          { "platform": "Instagram", "icon": "fab fa-instagram", "link": "#" },
+          { "platform": "Twitter", "icon": "fab fa-twitter", "link": "#" }
+        ]
+      }
+    },
+    {
+      "pageTitle": "Signature Global",
+      "meta": {
+        "description": "Explore Signature Global, a premium residential project in Mumbai. Discover project highlights, amenities, configurations, and get in touch for more details.",
+        "keywords": [
+          "Signature Global",
+          "Guruguram",
+          "Haryana",
+          "Residential Property",
+          "Real Estate",
+          "Flats for Sale"
+        ]
+      },
+      "header": {
+        "mainImage": "./project images/signatureGlobal.jpeg",
+        "title": "Signature Global",
+        "location": "Guruguram,Haryana"
+      },
+      "propertyGallery": {
+        "mainImage": "./project images/sig3.webp",
+        "additionalImages": [
+          "./project images/sig2.jpg",
+          "./project images/signatureGlobal.jpeg",
+          
+          {
+            "image": "./project images/sig4.jpg",
+            "overlayText": ""
+          },
+          {
+            "image": "./project images/sig5.jpg",
+            "overlayText": ""
+          }
+        ]
+      },
+      "buttons": [
+        { "text": "Shortlist", "icon": "fas fa-heart" },
+        { "text": "Share", "icon": "fas fa-share-alt" }
+      ],
+      "badges": [
+        { "text": "SY", "type": "exclusive" },
+        { "text": "Exclusive", "type": "exclusive" },
+        { "text": "Square Assured", "type": "assured" },
+        { "text": "RERA Registered", "type": "rera" },
+        { "text": "Residential", "type": "residential" }
+      ],
+      "navigation": [
+        { "label": "About", "link": "#project-about" },
+        { "label": "Overview", "link": "#overview" },
+        { "label": "Amenities", "link": "#amenities" },
+        { "label": "Configurations", "link": "#configurations" },
+        { "label": "Contact Us", "link": "#contact" }
+      ],
+      "projectAbout": {
+        "title": "About Signature Global",
+        "description": "",
+        "moreInfoLink": "#",
+        "questionBox": {
+          "text": "What's on your mind? Ask and get answers from our Property Experts",
+          "buttonText": "Ask Question"
+        },
+        "tabs": [
+          {
+            "title": "Project Overview",
+            "content": "Signature Global's eco-friendly buildings, located near Kadipur industrial area, offer air-conditioned work-from-home spaces, 100% power backup, and easy airport access via NH-8. With 49.65% price appreciation last year, these properties blend convenience with strong investment potential.",
+            "button": { "text": "More About Godrej Ascend Project 2", "link": "#" }
+          },
+          {
+            "title": "Price List",
+            "table": [
+              { "unitType": "2 BHK  Independent Floor", "area": "959-1145 Sq. Ft. (Carpet Area)", "price": "₹ 81 L - 1.23 Cr" },
+              { "unitType": "3 BHK  Independent Floor", "area": "1010-1535 Sq. Ft. (Carpet)", "price": "₹ 95 L - 1.85 Cr" },
+              { "unitType": "3.5 BHK Independent Floor", "area": "1500 Sq. Ft. (Carpet)", "price": "₹ 1.95 Cr" }
+             
+            ]
+          }
+        ]
+      },
+      "projectOverview": {
+        "status": "Ready to Move",
+        "unitSizes": "1300 Sq. Ft to 1500 Sq. Ft (Carpet)",
+        "totalUnits": 500,
+        "launchDate": "2022",
+        "locality": {
+          "name": "Sector 92, Gurgaon",
+          "link": "#"
+        },
+        "configurations": "2,3 BHK",
+        "builder": {
+          "name": "Signature Global India Limited",
+          "link": "#"
+        },
+        "projectSize": "150 Acres",
+        "completionDate": "2026",
+        "locationAdvantages": {
+          "name": " Pataudi Road(3.3 Km) RPS International School(3.8 KM)",
+          "link": "#"
+        }
+      },
+      "amenities": [
+        { "name": "Swimming Pool", "icon": "fas fa-swimming-pool" },
+        { "name": "Gymnasium", "icon": "fas fa-dumbbell" },
+        { "name": "Garden Area", "icon": "fas fa-park" },
+        { "name": "24/7 Security", "icon": "fas fa-shield-alt" },
+        { "name": "Children's Play Area", "icon": "fas fa-play-circle" },
+        { "name": "Community Hall", "icon": "fas fa-store" }
+      ],
+      "footer": {
+        "copyright": "© 2024 Godrej Ascend. All rights reserved.",
+        "socialLinks": [
+          { "platform": "Facebook", "icon": "fab fa-facebook", "link": "#" },
+          { "platform": "Instagram", "icon": "fab fa-instagram", "link": "#" },
+          { "platform": "Twitter", "icon": "fab fa-twitter", "link": "#" }
+        ]
+      }
+    },
+    {
+      "pageTitle":"Vatika Sovereign",
+      "meta": {
+        "description": "Explore Godrej Ascend, a premium residential project in Mumbai. Discover project highlights, amenities, configurations, and get in touch for more details.",
+        "keywords": [
+          "Godrej Properties",
+          "Guruguram",
+          "Haryana",
+          "Residential Property",
+          "Real Estate",
+          "Flats for Sale"
+        ]
+      },
+      "header": {
+        "mainImage": "./project images/Vatika-Soereig.jpeg",
+        "title": "Vatika Sovereign",
+        "location": "Guruguram,Haryana"
+      },
+      "propertyGallery": {
+        "mainImage": "./project images/Vat3.jpg",
+        "additionalImages": [
+          "./project images/vat1.jpg",
+          "./project images/Vatika-Soereig.jpeg",
+          
+          {
+            "image": "./project images/Vat2.jpg",
+            "overlayText": ""
+          },
+          {
+            "image": "./project images/Vat4.webp",
+            "overlayText": ""
+          }
+        ]
+      },
+      "buttons": [
+        { "text": "Shortlist", "icon": "fas fa-heart" },
+        { "text": "Share", "icon": "fas fa-share-alt" }
+      ],
+      "badges": [
+        { "text": "SY", "type": "exclusive" },
+        { "text": "Exclusive", "type": "exclusive" },
+        { "text": "Square Assured", "type": "assured" },
+        { "text": "RERA Registered", "type": "rera" },
+        { "text": "Residential", "type": "residential" }
+      ],
+      "navigation": [
+        { "label": "About", "link": "#project-about" },
+        { "label": "Overview", "link": "#overview" },
+        { "label": "Amenities", "link": "#amenities" },
+        { "label": "Configurations", "link": "#configurations" },
+        { "label": "Contact Us", "link": "#contact" }
+      ],
+      "projectAbout": {
+        "title": "About Vatika Sovereign ",
+        "description": "Godrej Ascend Project 2 is a beautiful project by Godrej Properties, one of the renowned developers in Mumbai. Located in Borivali, Mira Road and Beyond, it is well-connected by major roads such as Western Express Highway and SV Road. The project spans across 7.4 acres and offers 745 units. The project is currently in a new launch stage with various configurations available.",
+        "moreInfoLink": "#",
+        "questionBox": {
+          "text": "What's on your mind? Ask and get answers from our Property Experts",
+          "buttonText": "Ask Question"
+        },
+        "tabs": [
+          {
+            "title": "Project Overview",
+            "content": "Vatika Sovereign Located on NH 248BB (Dwarka Expressway), Gurgaon's exclusive project offers 360-degree views of 40-acre water bodies and vast landscapes. With just two apartments per floor, 80% open spaces, and 127,700 sq. ft. of amenities, it ensures luxury living with multi-tiered security.",
+            "button": { "text": "More About Godrej Ascend Project 2", "link": "#" }
+          },
+          {
+            "title": "Price List",
+            "table": [
+              { "unitType": "3 BHK  Apartment", "area": "2635 Sq. Ft.", "price": "₹ 3.6 Cr" },
+              { "unitType": "3 BHK  Apartment", "area": "2750 Sq. Ft.", "price": "₹ 3.75 Cr" },
+              { "unitType": "3 BHK  Apartment", "area": "2780 Sq. Ft.", "price": "₹ 3.80 Cr" },
+              { "unitType": "4 BHK  Apartment", "area": "3350 Sq. Ft.", "price": "₹4.50 Cr" },
+              { "unitType": "4 BHK  Apartment", "area": "4350 Sq. Ft.", "price": "₹5. Cr" },
+              { "unitType": "4 BHK  Apartment", "area": "5140 Sq. Ft.", "price": "₹5.94 Cr" },
+                            { "unitType": "4 BHK  Apartment", "area": "3200-5140 Sq. Ft.", "price": "₹ 4.30 - 8.20 Cr" }
+
+            ]
+          }
+        ]
+      },
+      "projectOverview": {
+        "status": "Ready to Move",
+        "unitSizes": "2700 Sq. Ft to 3700 Sq. Ft (Carpet)",
+        "totalUnits": 312,
+        "launchDate": "2014",
+        "locality": {
+          "name": "Sector 99, Gurgaon",
+          "link": "#"
+        },
+        "configurations": "3, 4 BHK",
+        "builder": {
+          "name": "Properties",
+          "link": "#"
+        },
+        "projectSize": "10 Acres",
+        "completionDate": "2025",
+        "locationAdvantages": {
+          "name": "Imperial Heritage School(3.8 Km)",
+          "link": "#"
+        }
+      },
+      "amenities": [
+        { "name": "Swimming Pool", "icon": "fas fa-swimming-pool" },
+        { "name": "Gymnasium", "icon": "fas fa-dumbbell" },
+        { "name": "Garden Area", "icon": "fas fa-park" },
+        { "name": "24/7 Security", "icon": "fas fa-shield-alt" },
+        { "name": "Children's Play Area", "icon": "fas fa-play-circle" },
+        { "name": "Community Hall", "icon": "fas fa-store" }
+      ],
+      "footer": {
+        "copyright": "© 2024 Godrej Ascend. All rights reserved.",
+        "socialLinks": [
+          { "platform": "Facebook", "icon": "fab fa-facebook", "link": "#" },
+          { "platform": "Instagram", "icon": "fab fa-instagram", "link": "#" },
+          { "platform": "Twitter", "icon": "fab fa-twitter", "link": "#" }
+        ]
+      }
+    },
+     {
+      "pageTitle":"AIPL Joy District",
+      "meta": {
+        "description": "Explore Twin Tower Signature Global , a premium residential project in Mumbai. Discover project highlights, amenities, configurations, and get in touch for more details.",
+        "keywords": [
+          "Godrej Properties",
+          "Borivali",
+          "Mumbai",
+          "Residential Property",
+          "Real Estate",
+          "Flats for Sale"
+        ]
+      },
+      "header": {
+        "mainImage": "./project images/aipl.jpg",
+        "title": "AIPL Joy District",
+        "location": "Gurugram,Haryana"
+      },
+      "propertyGallery": {
+        "mainImage": "./project images/aipl4.jpg",
+        "additionalImages": [
+          "./project images/aipl1.webp",
+          "./project images/aipl.jpg",
+          
+          {
+            "image": "./project images/aipl2.jpg",
+            "overlayText": ""
+          },
+          {
+            "image": "./project images/aipl3.jpg",
+            "overlayText": ""
+          }
+         
+        ]
+      },
+      "buttons": [
+        { "text": "Shortlist", "icon": "fas fa-heart" },
+        { "text": "Share", "icon": "fas fa-share-alt" }
+      ],
+      "badges": [
+        { "text": "SY", "type": "exclusive" },
+        { "text": "Exclusive", "type": "exclusive" },
+        { "text": "Square Assured", "type": "assured" },
+        { "text": "RERA Registered", "type": "rera" },
+        { "text": "Residential", "type": "residential" }
+      ],
+      "navigation": [
+        { "label": "About", "link": "#project-about" },
+        { "label": "Overview", "link": "#overview" },
+        { "label": "Amenities", "link": "#amenities" },
+        { "label": "Configurations", "link": "#configurations" },
+        { "label": "Contact Us", "link": "#contact" }
+      ],
+      "projectAbout": {
+        "title": "About Twin Tower Signature Global",
+        "description": "Twin Tower Signature Global is a beautiful project by Godrej Properties, one of the renowned developers in . Located in Borivali, Mira Road and Beyond, it is well-connected by major roads such as Western Express Highway and SV Road. The project spans across 7.4 acres and offers 745 units. The project is currently in a new launch stage with various configurations available.",
+        "moreInfoLink": "#",
+        "questionBox": {
+          "text": "What's on your mind? Ask and get answers from our Property Experts",
+          "buttonText": "Ask Question"
+        },
+        "tabs": [
+          {
+            "title": "Project Overview",
+            "content": "AIPL Joy District in Sector-88, Gurgaon, offers premium retail spaces starting from 500 sq.ft. at ₹83.34 L. Spread across 10.43 acres with 1190 units, this strategically located commercial project promises high visibility and strong investment returns.",
+            "button": { "text": "More About Godrej Ascend Project 2", "link": "#" }
+          },
+          {
+            "title": "Price List",
+            "table": [
+              { "unitType": "Shop", "area": "500 Sq. Ft.", "price": "₹ 83.5 L" },
+              { "unitType": "Shop", "area": "1200 Sq. Ft.", "price": "₹ 2 Cr" },
+              { "unitType": "Shop", "area": "2000 Sq. Ft.", "price": "₹ 3.35 Cr" },
+              { "unitType": "Shop", "area": "3500 Sq. Ft.", "price": "₹ 5.80 Cr" },
+              { "unitType": "Shop", "area": "7000 Sq. Ft.", "price": "₹ 11.50 Cr" },
+              { "unitType": " Ground Floor", "area": "550-800 Sq. Ft", "price": "₹ 43000/-Per sq.ft" },
+                            { "unitType": "First Floor", "area": "600-700 Sq. Ft", "price": "₹ 43000/-Per sq.ft" },
+                                          { "unitType": "Third Floor", "area": "850 Sq. Ft", "price": "₹ 43000/-Per sq.ft" }
+
+
+            ]
+          }
+        ]
+      },
+      "projectOverview": {
+        "status": "Ready to Move",
+        "unitSizes": "500 Sq. Ft to 1000 Sq. Ft (Carpet)",
+        "totalUnits": 800,
+        "launchDate": "2024",
+        "locality": {
+          "name": "Sector 88, Gurgaon",
+          "link": "#"
+        },
+        "configurations": "Commercial",
+        "builder": {
+          "name": "Godrej Properties",
+          "link": "#"
+        },
+        "projectSize": "10.5 Acres",
+        "completionDate": "2028",
+        "locationAdvantages": {
+          "name": "NH-8 (7.4 Km)",
+          "link": "#"
+        }
+      },
+      "amenities": [
+        { "name": "Garden Area", "icon": "fas fa-park" },
+        { "name": "24/7 Security", "icon": "fas fa-shield-alt" },
+        { "name": "Children's Play Area", "icon": "fas fa-play-circle" },
+        { "name": "Community Hall", "icon": "fas fa-store" }
+      ],
+      "footer": {
+        "copyright": "© 2024 .",
+        "socialLinks": [
+          { "platform": "Facebook", "icon": "fab fa-facebook", "link": "#" },
+          { "platform": "Instagram", "icon": "fab fa-instagram", "link": "#" },
+          { "platform": "Twitter", "icon": "fab fa-twitter", "link": "#" }
+        ]
+      }
+    },
+    {
+      "pageTitle": "Twin Tower Signature Global",
+      "meta": {
+        "description": "Explore Twin Tower Signature Global , a premium residential project in Mumbai. Discover project highlights, amenities, configurations, and get in touch for more details.",
+        "keywords": [
+          "Godrej Properties",
+          "Borivali",
+          "Mumbai",
+          "Residential Property",
+          "Real Estate",
+          "Flats for Sale"
+        ]
+      },
+      "header": {
+        "mainImage": "./project images/Signature-Global-Twin-Tower.webp",
+        "title": "Twin Tower Signature Global",
+        "location": "Gurugram,Haryana"
+      },
+      "propertyGallery": {
+        "mainImage": "./project images/tw5.webp",
+        "additionalImages": [
+          "./project images/tw1.webp",
+          "./project images/Signature-Global-Twin-Tower.webp",
+          
+          {
+            "image": "./project images/tw2.jpg",
+            "overlayText": ""
+          },
+          {
+            "image": "./project images/tw3.jpg",
+            "overlayText": ""
+          }
+         
+        ]
+      },
+      "buttons": [
+        { "text": "Shortlist", "icon": "fas fa-heart" },
+        { "text": "Share", "icon": "fas fa-share-alt" }
+      ],
+      "badges": [
+        { "text": "SY", "type": "exclusive" },
+        { "text": "Exclusive", "type": "exclusive" },
+        { "text": "Square Assured", "type": "assured" },
+        { "text": "RERA Registered", "type": "rera" },
+        { "text": "Residential", "type": "residential" }
+      ],
+      "navigation": [
+        { "label": "About", "link": "#project-about" },
+        { "label": "Overview", "link": "#overview" },
+        { "label": "Amenities", "link": "#amenities" },
+        { "label": "Configurations", "link": "#configurations" },
+        { "label": "Contact Us", "link": "#contact" }
+      ],
+      "projectAbout": {
+        "title": "About Twin Tower Signature Global",
+        "description": "Twin Tower Signature Global is a beautiful project by Godrej Properties, one of the renowned developers in . Located in Borivali, Mira Road and Beyond, it is well-connected by major roads such as Western Express Highway and SV Road. The project spans across 7.4 acres and offers 745 units. The project is currently in a new launch stage with various configurations available.",
+        "moreInfoLink": "#",
+        "questionBox": {
+          "text": "What's on your mind? Ask and get answers from our Property Experts",
+          "buttonText": "Ask Question"
+        },
+        "tabs": [
+          {
+            "title": "Project Overview",
+            "content": "Located at the Aravalli foothills with easy access to Golf Course Road and NCR, this property offers car parking (worth Rs. 5 lakh), club membership, modular kitchen, and fully air-conditioned rooms. The upcoming metro extension adds to its excellent connectivity via Gurugram-Sohna Elevated Road.",
+            "button": { "text": "More About Godrej Ascend Project 2", "link": "#" }
+          },
+          {
+            "title": "Price List",
+            "table": [
+              { "unitType": "3 BHK  Apartment", "area": "1829 Sq. Ft. (Carpet Area)", "price": "₹ 3.80 Cr" },
+              { "unitType": "3 BHK  Apartment", "area": "2650 Sq. Ft. (Carpet Area)", "price": "₹ 5.57 Cr" },
+              { "unitType": "3.5 BHK  Apartment", "area": "2980 Sq. Ft. (Carpet Area)", "price": "₹ 6.26 Cr" },
+              { "unitType": "4 BHK  Apartment", "area": "2575 Sq. Ft. (Carpet Area)", "price": "₹ 5.55 Cr" },
+              { "unitType": "4.5 BHK  Apartment", "area": "3785 Sq. Ft. (Carpet Area)", "price": "₹ 7.95 Cr" }
+            ]
+          }
+        ]
+      },
+      "projectOverview": {
+        "status": "New Launch",
+        "unitSizes": "1800 Sq. Ft to 2500 Sq. Ft (Carpet)",
+        "totalUnits": 312,
+        "launchDate": "2024",
+        "locality": {
+          "name": "Sector 84,Gurgaon",
+          "link": "#"
+        },
+        "configurations": "3, 4 BHK",
+        "builder": {
+          "name": "Properties",
+          "link": "#"
+        },
+        "projectSize": "5 Acres",
+        "completionDate": "2028",
+        "locationAdvantages": {
+          "name": "Aarvy Healthcare Pvt Ltd(2.6 Km)",
+          "link": "#"
+        }
+      },
+      "amenities": [
+        { "name": "Swimming Pool", "icon": "fas fa-swimming-pool" },
+        { "name": "Gymnasium", "icon": "fas fa-dumbbell" },
+        { "name": "Garden Area", "icon": "fas fa-park" },
+        { "name": "24/7 Security", "icon": "fas fa-shield-alt" },
+        { "name": "Children's Play Area", "icon": "fas fa-play-circle" },
+        { "name": "Community Hall", "icon": "fas fa-store" }
+      ],
+      "footer": {
+        "copyright": "© 2024 Godrej Ascend. All rights reserved.",
+        "socialLinks": [
+          { "platform": "Facebook", "icon": "fab fa-facebook", "link": "#" },
+          { "platform": "Instagram", "icon": "fab fa-instagram", "link": "#" },
+          { "platform": "Twitter", "icon": "fab fa-twitter", "link": "#" }
+        ]
+      }
+    },
+     {
+      "pageTitle": "TLC The First Acre",
+      "meta": {
+        "description": "THE LAND COMPANY unveils TLC The First Acre, Haryana's innovative affordable housing project offering 1, 2, and 3BHK units with world-class amenities, redefining accessible urban living.",
+        "keywords": [
+          "Godrej Properties",
+          "Borivali",
+          "Gurugram",
+          "Residential Property",
+          "Real Estate",
+          "Flats for Sale"
+        ]
+      },
+      "header": {
+        "mainImage": "./project images/tlc1.avif",
+        "title": "TLC The First Acre",
+        "location": "Gurugram,Haryana"
+      },
+      "propertyGallery": {
+        "mainImage": "./project images/tlc3.jpg",
+        "additionalImages": [
+          "./project images/tlc2.webp",
+          "./project images/tlc4.jpg",
+          
+          {
+            "image": "./project images/tlc5.jpg",
+            "overlayText": ""
+          },
+          {
+            "image": "./project images/tw3.jpg",
+            "overlayText": ""
+          }
+         
+        ]
+      },
+      "buttons": [
+        { "text": "Shortlist", "icon": "fas fa-heart" },
+        { "text": "Share", "icon": "fas fa-share-alt" }
+      ],
+      "badges": [
+        { "text": "SY", "type": "exclusive" },
+        { "text": "Exclusive", "type": "exclusive" },
+        { "text": "Square Assured", "type": "assured" },
+        { "text": "RERA Registered", "type": "rera" },
+        { "text": "Residential", "type": "residential" }
+      ],
+      "navigation": [
+        { "label": "About", "link": "#project-about" },
+        { "label": "Overview", "link": "#overview" },
+        { "label": "Amenities", "link": "#amenities" },
+        { "label": "Configurations", "link": "#configurations" },
+        { "label": "Contact Us", "link": "#contact" }
+      ],
+      "projectAbout": {
+        "title": "TLC The First Acre",
+        "description": "Nestled in the heart of Haryana, THE LAND COMPANY introduces its innovative residential development, TLC The First Acre. This thoughtfully designed housing initiative aims to make quality living accessible, featuring a diverse range of 1, 2, and 3-bedroom apartments complemented by premium facilities that elevate the standard of affordable housing in the region.",
+        "moreInfoLink": "#",
+        "questionBox": {
+          "text": "What's on your mind? Ask and get answers from our Property Experts",
+          "buttonText": "Ask Question"
+        },
+        "tabs": [
+          {
+            "title": "Project Overview",
+            "content": "Nestled in the heart of Haryana, THE LAND COMPANY introduces its innovative residential development, TLC The First Acre. This thoughtfully designed housing initiative aims to make quality living accessible, featuring a diverse range of 1, 2, and 3-bedroom apartments complemented by premium facilities that elevate the standard of affordable housing in the region.",
+            "button": { "text": "More About Godrej Ascend Project 2", "link": "#" }
+          },
+          {
+            "title": "Price List",
+            "table": [
+              { "unitType": "1 BHK(Type 1)", "area": "350 Sq.Ft + 66 Sq.Ft Balconoy","price": "₹ 35 lakh" },
+               { "unitType": "1 BHK(Type 2)", "area": "357 Sq.Ft + 100 Sq.Ft Balconoy","price": "₹ 35 lakh" },
+              { "unitType": "2 BHK(Type 1)", "area": "464 Sq.Ft + 87 Sq.Ft Balconoy", "price": "₹ 47 lakh" },
+              { "unitType": "2 BHK(Type 2)", "area": "540 Sq.Ft + 99 Sq.Ft Balconoy", "price": "₹ 47 lakh" },
+              { "unitType": "2 BHK(Type 3)", "area": "571 Sq.Ft + 65 Sq.Ft Balconoy", "price": "₹ 47 lakh" },
+              { "unitType": "3 BHK", "area": "645 Sq.Ft + 95 Sq.Ft Balconoy", "price": "₹ 65 lakh" }
+            ]
+          }
+        ]
+      },
+      "projectOverview": {
+        "status": "Possession soon",
+        "unitSizes": "350 Sq. Ft to 645 Sq. Ft (Carpet)",
+        "totalUnits": 700,
+        "launchDate": "2025",
+        "locality": {
+          "name": "Sector 78,Gurgaon",
+          "link": "#"
+        },
+        "configurations": "1,2,3, 4 BHK",
+        "builder": {
+          "name": "The Land Company ",
+          "link": "#"
+        },
+        "projectSize": "9.06 Acres",
+        "completionDate": "2027",
+        "locationAdvantages": {
+          "name": "Nearby landmarks include Sapphire 83 Mall (3.1 km)",
+          "link": "#"
+        }
+      },
+      "amenities": [
+        { "name": "Swimming Pool", "icon": "fas fa-swimming-pool" },
+        { "name": "Gymnasium", "icon": "fas fa-dumbbell" },
+        { "name": "Garden Area", "icon": "fas fa-park" },
+        { "name": "24/7 Security", "icon": "fas fa-shield-alt" },
+        { "name": "Children's Play Area", "icon": "fas fa-play-circle" },
+        { "name": "Community Hall", "icon": "fas fa-store" }
+      ],
+      "footer": {
+        "copyright": "© 2024 Godrej Ascend. All rights reserved.",
+        "socialLinks": [
+          { "platform": "Facebook", "icon": "fab fa-facebook", "link": "#" },
+          { "platform": "Instagram", "icon": "fab fa-instagram", "link": "#" },
+          { "platform": "Twitter", "icon": "fab fa-twitter", "link": "#" }
+        ]
+      }
+    },
+     {
+      "pageTitle": "BPTP Lutyens 102",
+      "meta": {
+        "description": "Lutyens 102: Where Luxury Meets Connectivity on Dwarka Expressway! Prime location, expansive roads, your dream home awaits.",
+        "keywords": [
+          "BPTP Limited",
+          "Dwarka",
+          "Delhi",
+          "Residential Property",
+          "Real Estate",
+          "Flats for Sale"
+        ]
+      },
+      "header": {
+        "mainImage": "./project images/lutyens1.webp",
+        "title": "BPTP Lutyens 102",
+        "location": "Dwarka Expressway Gurgaon"
+      },
+      "propertyGallery": {
+        "mainImage": "./project images/lutyens1.webp",
+        "additionalImages": [
+          "./project images/lutyens4.avif",
+          "./project images/lutyes3.avif",
+          
+          {
+            "image": "./project images/lutyens5.jpg",
+            "overlayText": ""
+          },
+          {
+            "image": "./project images/lutyens6.jpg",
+            "overlayText": ""
+          }
+         
+        ]
+      },
+      "buttons": [
+        { "text": "Shortlist", "icon": "fas fa-heart" },
+        { "text": "Share", "icon": "fas fa-share-alt" }
+      ],
+      "badges": [
+        { "text": "SY", "type": "exclusive" },
+        { "text": "Exclusive", "type": "exclusive" },
+        { "text": "Square Assured", "type": "assured" },
+        { "text": "RERA Registered", "type": "rera" },
+        { "text": "Residential", "type": "residential" }
+      ],
+      "navigation": [
+        { "label": "About", "link": "#project-about" },
+        { "label": "Overview", "link": "#overview" },
+        { "label": "Amenities", "link": "#amenities" },
+        { "label": "Configurations", "link": "#configurations" },
+        { "label": "Contact Us", "link": "#contact" }
+      ],
+      "projectAbout": {
+        "title": "BPTP Lutyens 102",
+        "description": "Discover Lutyens 102: Where urban connectivity meets luxurious living. Perfectly positioned on Dwarka Expressway, this isn't just a home—it's your gateway to an extraordinary lifestyle.",
+        "moreInfoLink": "#",
+        "questionBox": {
+          "text": "What's on your mind? Ask and get answers from our Property Experts",
+          "buttonText": "Ask Question"
+        },
+        "tabs": [
+          {
+            "title": "Project Overview",
+            "content": "Discover Lutyens 102: Where urban connectivity meets luxurious living. Perfectly positioned on Dwarka Expressway, this isn't just a home—it's your gateway to an extraordinary lifestyle.",
+            "button": { "text": "More About Godrej Ascend Project 2", "link": "#" }
+          },
+          {
+            "title": "Price List",
+            "table": [
+             
+              { "unitType": "2 BHK", "area": "1600 Sq.Ft ", "price": "EOI Amount:₹ 15 lakh"},
+              { "unitType": "3 BHK", "area": "2400 Sq.Ft", "price": "EOI Amount:₹ 21 lakh"}
+            
+            ]
+          }
+        ]
+      },
+      "projectOverview": {
+        "status": "Dec 2029 Possession Starts",
+        "unitSizes": "350 Sq. Ft to 645 Sq. Ft (Carpet)",
+        "totalUnits": 531,
+        "launchDate": "2025",
+        "locality": {
+          "name": "Sector 102, Dwarka Expressway Gurugram",
+          "link": "#"
+        },
+        "configurations": "2,3 BHK",
+        "builder": {
+          "name": "BPTP Limited ",
+          "link": "#"
+        },
+        "projectSize": "12 Acres",
+        "completionDate": "2029",
+        "locationAdvantages": {
+          "name": "Delhi Public School - 1.7km Satya Mall - 1.9km",
+          "link": "#"
+        }
+      },
+      "amenities": [
+        { "name": "Swimming Pool", "icon": "fas fa-swimming-pool" },
+        { "name": "Gymnasium", "icon": "fas fa-dumbbell" },
+        { "name": "Garden Area", "icon": "fas fa-park" },
+        { "name": "24/7 Security", "icon": "fas fa-shield-alt" },
+        { "name": "Children's Play Area", "icon": "fas fa-play-circle" },
+        { "name": "Community Hall", "icon": "fas fa-store" }
+      ],
+      "footer": {
+        "copyright": "© 2024 Godrej Ascend. All rights reserved.",
+        "socialLinks": [
+          { "platform": "Facebook", "icon": "fab fa-facebook", "link": "#" },
+          { "platform": "Instagram", "icon": "fab fa-instagram", "link": "#" },
+          { "platform": "Twitter", "icon": "fab fa-twitter", "link": "#" }
+        ]
+      }
+    }
+  ]
+}
