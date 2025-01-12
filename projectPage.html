@@ -21,13 +21,13 @@
   <!-- Header Section -->
   <header>
     <div class="containerImg">
-      <img src="./project images/krusumi.jpg" alt="Main Property Image" />
+      <img loading="lazy" src="./project images/krusumi.jpg" alt="Main Property Image" />
       <div>
         <h1>Kalpataru Bliss</h1>
         <p>Andheri, Mumbai</p>
       </div>
       <div class="companyLogo">
-        <img src="img/logo-1.webp" alt="" />
+        <img loading="lazy" src="img/logo-1.webp" alt="" />
       </div>
     </div>
         
@@ -37,23 +37,23 @@
   <section id="property-gallery">
     <!-- Left: Main Image with Badges -->
     <div class="main-image">
-      <img src="./project images/krusumi.jpg" alt="Main Property Image" />
+      <img loading="lazy" src="./project images/krusumi.jpg" alt="Main Property Image" />
 
       <!-- Right: Additional Images and Virtual Tour -->
       <div class="additional-images" id="additionalImagesContainer">
         <div class="image-item">
-          <img src="https://via.placeholder.com/150x100" alt="Image 1" />
+          <img loading="lazy" src="https://via.placeholder.com/150x100" alt="Image 1" />
         </div>
         <div class="image-item">
-          <img src="https://via.placeholder.com/150x100" alt="Image 2" />
+          <img loading="lazy" src="https://via.placeholder.com/150x100" alt="Image 2" />
         </div>
         <div class="image-item more-photos">+16 Photos</div>
         <div class="image-item">
-          <img src="https://via.placeholder.com/150x100" alt="Virtual Tour" />
+          <img loading="lazy" src="https://via.placeholder.com/150x100" alt="Virtual Tour" />
           <span class="overlay-text">Virtual Tour</span>
         </div>
         <div class="image-item">
-          <img src="https://via.placeholder.com/150x100" alt="Video" />
+          <img loading="lazy" src="https://via.placeholder.com/150x100" alt="Video" />
           <span class="overlay-text">Video</span>
         </div>
       </div>
@@ -477,7 +477,7 @@
             if (typeof image === "string") {
               // Handle string image URLs
               imageElement.innerHTML = `
-            <img src="${image}" alt="Additional Image" />
+            <img loading="lazy"  src="${image}" alt="Additional Image" />
           `;
             } else if (
               typeof image === "object" &&
@@ -485,7 +485,7 @@
             ) {
               // Handle image objects with overlay text
               imageElement.innerHTML = `
-            <img src="${image.image}" alt="${image.alt || "Additional Image"
+            <img loading="lazy"  src="${image.image}" alt="${image.alt || "Additional Image"
                 }" />
             <span class="overlay-text">${image.overlayText}</span>
           `;
