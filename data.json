@@ -133,22 +133,22 @@
         ]
       },
       "header": {
-        "mainImage": "./project images/signatureGlobal.jpeg",
+        "mainImage": "./project images/signatureGlobal.webp",
         "title": "Signature Global",
         "location": "Guruguram,Haryana"
       },
       "propertyGallery": {
         "mainImage": "./project images/sig3.webp",
         "additionalImages": [
-          "./project images/sig2.jpg",
-          "./project images/signatureGlobal.jpeg",
+          "./project images/sig2.webp",
+          "./project images/signatureGlobal.webp",
           
           {
-            "image": "./project images/sig4.jpg",
+            "image": "./project images/sig4.webp",
             "overlayText": ""
           },
           {
-            "image": "./project images/sig5.jpg",
+            "image": "./project images/sig5.webp",
             "overlayText": ""
           }
         ]
@@ -248,22 +248,22 @@
         ]
       },
       "header": {
-        "mainImage": "./project images/Vatika-Soereig.jpeg",
+        "mainImage": "./project images/Vatika-Soereig.webp",
         "title": "Vatika Sovereign",
         "location": "Guruguram,Haryana"
       },
       "propertyGallery": {
-        "mainImage": "./project images/Vat3.jpg",
+        "mainImage": "./project images/vat3.webp",
         "additionalImages": [
-          "./project images/vat1.jpg",
-          "./project images/Vatika-Soereig.jpeg",
+          "./project images/vat1.webp",
+          "./project images/Vatika-Soereig.webp",
           
           {
-            "image": "./project images/Vat2.jpg",
+            "image": "./project images/vat2.webp",
             "overlayText": ""
           },
           {
-            "image": "./project images/Vat4.webp",
+            "image": "./project images/vat4.webp",
             "overlayText": ""
           }
         ]
@@ -367,22 +367,22 @@
         ]
       },
       "header": {
-        "mainImage": "./project images/aipl.jpg",
+        "mainImage": "./project images/aipl.webp",
         "title": "AIPL Joy District",
         "location": "Gurugram,Haryana"
       },
       "propertyGallery": {
-        "mainImage": "./project images/aipl4.jpg",
+        "mainImage": "./project images/aipl4.webp",
         "additionalImages": [
           "./project images/aipl1.webp",
-          "./project images/aipl.jpg",
+          "./project images/aipl.webp",
           
           {
-            "image": "./project images/aipl2.jpg",
+            "image": "./project images/aipl2.webp",
             "overlayText": ""
           },
           {
-            "image": "./project images/aipl3.jpg",
+            "image": "./project images/aipl3.webp",
             "overlayText": ""
           }
          
@@ -498,7 +498,7 @@
           "./project images/Signature-Global-Twin-Tower.webp",
           
           {
-            "image": "./project images/tw2.jpg",
+            "image": "./project images/tw2.webp",
             "overlayText": ""
           },
           {
@@ -589,125 +589,7 @@
           { "platform": "Twitter", "icon": "fab fa-twitter", "link": "#" }
         ]
       }
-    },
-     {
-      "pageTitle": "TLC The First Acre",
-      "meta": {
-        "description": "THE LAND COMPANY unveils TLC The First Acre, Haryana's innovative affordable housing project offering 1, 2, and 3BHK units with world-class amenities, redefining accessible urban living.",
-        "keywords": [
-          "Godrej Properties",
-          "Borivali",
-          "Gurugram",
-          "Residential Property",
-          "Real Estate",
-          "Flats for Sale"
-        ]
-      },
-      "header": {
-        "mainImage": "./project images/tlc1.avif",
-        "title": "TLC The First Acre",
-        "location": "Gurugram,Haryana"
-      },
-      "propertyGallery": {
-        "mainImage": "./project images/tlc3.jpg",
-        "additionalImages": [
-          "./project images/tlc2.webp",
-          "./project images/tlc4.jpg",
-          
-          {
-            "image": "./project images/tlc5.jpg",
-            "overlayText": ""
-          },
-          {
-            "image": "./project images/tw3.jpg",
-            "overlayText": ""
-          }
-         
-        ]
-      },
-      "buttons": [
-        { "text": "Shortlist", "icon": "fas fa-heart" },
-        { "text": "Share", "icon": "fas fa-share-alt" }
-      ],
-      "badges": [
-        { "text": "SY", "type": "exclusive" },
-        { "text": "Exclusive", "type": "exclusive" },
-        { "text": "Square Assured", "type": "assured" },
-        { "text": "RERA Registered", "type": "rera" },
-        { "text": "Residential", "type": "residential" }
-      ],
-      "navigation": [
-        { "label": "About", "link": "#project-about" },
-        { "label": "Overview", "link": "#overview" },
-        { "label": "Amenities", "link": "#amenities" },
-        { "label": "Configurations", "link": "#configurations" },
-        { "label": "Contact Us", "link": "#contact" }
-      ],
-      "projectAbout": {
-        "title": "TLC The First Acre",
-        "description": "Nestled in the heart of Haryana, THE LAND COMPANY introduces its innovative residential development, TLC The First Acre. This thoughtfully designed housing initiative aims to make quality living accessible, featuring a diverse range of 1, 2, and 3-bedroom apartments complemented by premium facilities that elevate the standard of affordable housing in the region.",
-        "moreInfoLink": "#",
-        "questionBox": {
-          "text": "What's on your mind? Ask and get answers from our Property Experts",
-          "buttonText": "Ask Question"
-        },
-        "tabs": [
-          {
-            "title": "Project Overview",
-            "content": "Nestled in the heart of Haryana, THE LAND COMPANY introduces its innovative residential development, TLC The First Acre. This thoughtfully designed housing initiative aims to make quality living accessible, featuring a diverse range of 1, 2, and 3-bedroom apartments complemented by premium facilities that elevate the standard of affordable housing in the region.",
-            "button": { "text": "More About Godrej Ascend Project 2", "link": "#" }
-          },
-          {
-            "title": "Price List",
-            "table": [
-              { "unitType": "1 BHK(Type 1)", "area": "350 Sq.Ft + 66 Sq.Ft Balconoy","price": "₹ 35 lakh" },
-               { "unitType": "1 BHK(Type 2)", "area": "357 Sq.Ft + 100 Sq.Ft Balconoy","price": "₹ 35 lakh" },
-              { "unitType": "2 BHK(Type 1)", "area": "464 Sq.Ft + 87 Sq.Ft Balconoy", "price": "₹ 47 lakh" },
-              { "unitType": "2 BHK(Type 2)", "area": "540 Sq.Ft + 99 Sq.Ft Balconoy", "price": "₹ 47 lakh" },
-              { "unitType": "2 BHK(Type 3)", "area": "571 Sq.Ft + 65 Sq.Ft Balconoy", "price": "₹ 47 lakh" },
-              { "unitType": "3 BHK", "area": "645 Sq.Ft + 95 Sq.Ft Balconoy", "price": "₹ 65 lakh" }
-            ]
-          }
-        ]
-      },
-      "projectOverview": {
-        "status": "Possession soon",
-        "unitSizes": "350 Sq. Ft to 645 Sq. Ft (Carpet)",
-        "totalUnits": 700,
-        "launchDate": "2025",
-        "locality": {
-          "name": "Sector 78,Gurgaon",
-          "link": "#"
-        },
-        "configurations": "1,2,3, 4 BHK",
-        "builder": {
-          "name": "The Land Company ",
-          "link": "#"
-        },
-        "projectSize": "9.06 Acres",
-        "completionDate": "2027",
-        "locationAdvantages": {
-          "name": "Nearby landmarks include Sapphire 83 Mall (3.1 km)",
-          "link": "#"
-        }
-      },
-      "amenities": [
-        { "name": "Swimming Pool", "icon": "fas fa-swimming-pool" },
-        { "name": "Gymnasium", "icon": "fas fa-dumbbell" },
-        { "name": "Garden Area", "icon": "fas fa-park" },
-        { "name": "24/7 Security", "icon": "fas fa-shield-alt" },
-        { "name": "Children's Play Area", "icon": "fas fa-play-circle" },
-        { "name": "Community Hall", "icon": "fas fa-store" }
-      ],
-      "footer": {
-        "copyright": "© 2024 Godrej Ascend. All rights reserved.",
-        "socialLinks": [
-          { "platform": "Facebook", "icon": "fab fa-facebook", "link": "#" },
-          { "platform": "Instagram", "icon": "fab fa-instagram", "link": "#" },
-          { "platform": "Twitter", "icon": "fab fa-twitter", "link": "#" }
-        ]
-      }
-    },
+    },   
      {
       "pageTitle": "BPTP Lutyens 102",
       "meta": {
@@ -727,17 +609,17 @@
         "location": "Dwarka Expressway Gurgaon"
       },
       "propertyGallery": {
-        "mainImage": "./project images/lutyens1.webp",
+        "mainImage": "./project images/lutyens5.webp",
         "additionalImages": [
-          "./project images/lutyens4.avif",
-          "./project images/lutyes3.avif",
+          "./project images/lutyens4.webp",
+          "./project images/lutyes3.webp",
           
           {
-            "image": "./project images/lutyens5.jpg",
+            "image": "./project images/lutyens1.webp",
             "overlayText": ""
           },
           {
-            "image": "./project images/lutyens6.jpg",
+            "image": "./project images/lutyens6.webp",
             "overlayText": ""
           }
          
