@@ -13,20 +13,27 @@ body {
 
 /* Header Styling */
 header {
-  background-color: #2c3e50;
-  color: #fff;
+  background-color: #e1f0ff;
+  color: black;
   text-align: center;
+  padding: 5px;
 }
 
 header h1 {
-  font-size: 2rem;
-  margin-bottom: 5px;
+  /* font-size: 2rem;
+  margin-bottom: 5px; */
+  font-size: 3rem;
+  font-weight: bold;
+  text-shadow: 1px 2px 1px rgba(0, 0, 0, 0.1);
+  margin: 5px 0;
 }
 
 header p {
-  font-size: 2rem;
+  font-size: 1.5rem;
+  font-style: italic;
   margin-bottom: 10px;
 }
+
 
 header nav a {
   color: #f39c12;
@@ -49,7 +56,7 @@ header nav a:hover {
 .nav-bar a {
   color: #333;
   /* Example text color */
-  text-decoration:underline;
+  text-decoration: underline;
   /* Remove underline */
   /* padding: 10px; */
   font-size: 1.8rem;
@@ -97,7 +104,7 @@ section h2 {
   justify-content: space-between;
   align-items: center;
   border-bottom: 1px solid #ddd;
-  padding-bottom: 15px;
+  padding-bottom: 1px;
 }
 
 .project-header h2 {
@@ -157,9 +164,9 @@ section h2 {
 .tab-content {
   font-size: 1.2rem;
   font-weight: bold;
-  line-height: 4.6;
+  line-height: 2.6;
   color: #555;
-  padding-bottom:1%;
+  padding-bottom: 1%;
 }
 
 .more-info-btn {
@@ -350,26 +357,6 @@ footer .social-links a:hover {
 }
 
 /* Main Image Section */
-.main-image {
-  position: relative;
-  height: 400px;
-  width: 80%;
-  /* max-width: 900px; */
-  overflow: hidden;
-  border-radius: 8px;
-  margin: 20px;
-  /* margin-left: 100px; */
-  display: flex;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.main-image img {
-  width: 100%;
-  height: auto;
-  display: block;
-  border-radius: 8px;
-  margin: 10px;
-}
 
 .badges {
   position: absolute;
@@ -420,50 +407,6 @@ footer .social-links a:hover {
   background-color: #f0f0f0;
 }
 
-/* Additional Images Section */
-.additional-images {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 10px;
-}
-
-.image-item {
-  position: relative;
-  overflow: hidden;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.image-item img {
-  width: 100%;
-  height: 100%;
-  border-radius: 8px;
-  object-fit: cover;
-  display: block;
-}
-
-.more-photos {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #333;
-  color: #fff;
-  font-weight: bold;
-  font-size: 1.1rem;
-}
-
-.overlay-text {
-  position: absolute;
-  bottom: 10px;
-  left: 10px;
-  background-color: rgba(0, 0, 0, 0.7);
-  color: #fff;
-  padding: 5px 10px;
-  border-radius: 4px;
-  font-size: 0.9rem;
-  font-weight: 500;
-}
-
 /* Bottom Badges */
 .bottom-badges {
   display: flex;
@@ -487,41 +430,30 @@ footer .social-links a:hover {
 
 /* Responsive Design */
 @media (max-width: 768px) {
-  .additional-images {
+  /* .additional-images {
     grid-template-columns: 1fr;
-  }
+  } */
+}
+tab-content {
+  line-height: 1; /* Slightly tighter on mobile */
+  font-size: 1.1rem;
 }
 .containerImg {
   display: flex;
-  justify-content:left;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2px;
 }
 .containerImg img {
-  height: 120px;
+  /* height: 120px;
   width: 330px;
-  margin: 10px;
+  margin: 10px; */
+  max-width: 200px;
+  height: auto;
 }
-.companyLogo img{
-  height: 130px;
-  width: 180px;
-
+.containerImg div {
+  flex: 0.5;
 }
-
-/* .container {
-    max-width: 800px;
-    margin: 20px auto;
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-}
-
-h2 {
-    font-size: 1.6rem;
-    color: #333;
-    border-bottom: 1px solid #ddd;
-    padding-bottom: 10px;
-    margin-bottom: 20px;
-} */
 
 /* Grid Layout */
 .overview-grid {
@@ -544,7 +476,7 @@ h2 {
 .label {
   font-weight: bold;
   color: #555;
-    font-size: 1.2rem;
+  font-size: 1.2rem;
 }
 
 .value {
@@ -563,8 +495,201 @@ h2 {
 }
 /* Styling header logo image*/
 .companyLogo {
+  margin-top: 15px;
   display: flex;
   justify-content: end;
   width: 100%;
-  height: auto;
+  height:fit-content;
+}
+/* Add these media queries to your existing CSS */
+
+/* Navigation Responsive Styles */
+@media (max-width: 768px) {
+  .containerImg {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+  }
+  .containerImg img {
+    display: none; /* Hide the image */
+  }
+  .containerImg div {
+    flex: 1;
+    width: 100%;
+  }
+  .containerImg h1 {
+    font-size: 1.8rem;
+    margin-bottom: 5px;
+    text-align: center;
+  }
+
+  .containerImg p {
+    font-size: 1.4rem;
+    text-align: center;
+  }
+  .nav-bar {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 10px;
+  }
+
+  .nav-bar a {
+    width: 100%;
+    text-align: center;
+    padding: 12px;
+    font-size: 1.4rem;
+    border-bottom: 1px solid #eee;
+  }
+
+  .nav-bar a:last-child {
+    border-bottom: none;
+  }
+}
+
+/* Property Gallery Responsive Styles */
+@media (max-width: 768px) {
+  /* #property-gallery {
+    padding: 10px;
+  } */
+
+  /* .main-image {
+    width: 100%;
+    height: 300px;
+    margin: 10px 0;
+  } */
+
+  /* .additional-images {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  } */
+
+  /* .image-item {
+    height: 200px;
+  } */
+
+  .bottom-badges-container {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .bottom-badges {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .badge {
+    font-size: 0.8rem;
+    padding: 4px 6px;
+  }
+}
+
+/* Overview Grid Responsive Styles */
+@media (max-width: 768px) {
+  .overview-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .overview-item {
+    padding: 10px;
+    background: #f5f5f5;
+    border-radius: 8px;
+  }
+
+  .label {
+    font-size: 1rem;
+  }
+
+  .value {
+    font-size: 1.1rem;
+  }
+}
+
+/* Project About Section Responsive Styles */
+@media (max-width: 768px) {
+  .project-header {
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+  }
+
+  .tabs {
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+  }
+
+  .tab-btn,
+  .tab-btn2 {
+    width: 100%;
+    text-align: center;
+    font-size: 1.1rem;
+  }
+
+  .price-table {
+    font-size: 0.9rem;
+  }
+
+  .price-table th,
+  .price-table td {
+    padding: 8px;
+    font-size: 0.9rem;
+  }
+}
+
+/* Amenities Section Responsive Styles */
+@media (max-width: 768px) {
+  #amenities .amenities-list {
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+  }
+
+  .amenity {
+    width: 100%;
+    padding: 10px;
+    font-size: 1.2rem;
+  }
+
+  .amenity i {
+    font-size: 1.6rem;
+  }
+}
+
+/* Container Responsive Padding */
+@media (max-width: 768px) {
+  .container {
+    padding: 15px;
+    margin: 10px;
+  }
+}
+
+/* Header Typography Responsive Styles */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 1.6rem;
+    margin-bottom: 5px;
+  }
+
+  header p {
+    font-size: 1.4rem;
+  }
+ 
+}
+
+/* Fix for very small screens */
+@media (max-width: 320px) {
+  .nav-bar a {
+    font-size: 1.2rem;
+    padding: 8px;
+  }
+
+  .badge {
+    font-size: 0.7rem;
+    padding: 3px 5px;
+  }
+
+  .main-image {
+    height: 250px;
+  }
 }

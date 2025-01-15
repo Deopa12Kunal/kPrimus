@@ -1,133 +1,150 @@
-// Mobile Menu Toggle
-const mobileMenuBtn = document.querySelector(".mobile-menu-btn");
-const navLinks = document.querySelector(".nav-links");
+let tabData = null;
 
-mobileMenuBtn.addEventListener("click", () => {
-  navLinks.classList.toggle("active");
-});
-
-// Close mobile menu when clicking outside
-document.addEventListener("click", (event) => {
-  if (
-    !event.target.closest(".nav-links") &&
-    !event.target.closest(".mobile-menu-btn")
-  ) {
-    navLinks.classList.remove("active");
+// Function to fetch data if not already loaded
+async function getTabData() {
+  if (!tabData) {
+    try {
+      const response = await fetch("../data.json");
+      tabData = await response.json();
+    } catch (error) {
+      console.error("Error loading tab data:", error);
+      return null;
+    }
   }
-});
-
-// Dropdown Menu for Mobile
-const dropdowns = document.querySelectorAll(".dropdown");
-
-dropdowns.forEach((dropdown) => {
-  const button = dropdown.querySelector(".dropbtn");
-  const content = dropdown.querySelector(".dropdown-content");
-
-  if (window.innerWidth <= 768) {
-    button.addEventListener("click", (e) => {
-      e.preventDefault();
-      // Close other dropdowns
-      dropdowns.forEach((other) => {
-        if (other !== dropdown) {
-          other.querySelector(".dropdown-content").style.display = "none";
-        }
-      });
-      // Toggle current dropdown
-      content.style.display =
-        content.style.display === "block" ? "none" : "block";
-    });
-  }
-});
-
-// Action Buttons
-document.querySelector(".btn-whatsapp").addEventListener("click", () => {
-  // Add WhatsApp functionality
-  alert("Opening WhatsApp...");
-});
-
-document.querySelector(".btn-callback").addEventListener("click", () => {
-  // Add callback functionality
-  alert("Requesting callback...");
-});
-
-// Read More
-document.querySelector(".read-more").addEventListener("click", () => {
-  // Add read more functionality
-  alert("Loading full description...");
-});
-
-// Handle window resize
-window.addEventListener("resize", () => {
-  if (window.innerWidth > 768) {
-    navLinks.classList.remove("active");
-    dropdowns.forEach((dropdown) => {
-      dropdown.querySelector(".dropdown-content").style.display = "";
-    });
-  }
-});
-
-
-// Function to dynamically fetch and update tab content based on tabId
-function updateTabContent(tabId) {
-  fetch("../data.json")
-    .then((response) => response.json())
-    .then((data) => {
-      const property = data.properties.find((p) => p.pageTitle === pageTitle);
-      if (!property) return;
-
-      // Update content based on the selected tab
-      if (tabId === "overview") {
-        document.querySelector("#overview .overview-item:nth-child(1) .value").textContent = property.projectOverview.status;
-        document.querySelector("#overview .overview-item:nth-child(2) .value").textContent = property.projectOverview.unitSizes;
-        document.querySelector("#overview .overview-item:nth-child(3) .value").textContent = property.projectOverview.totalUnits;
-        document.querySelector("#overview .overview-item:nth-child(4) .value").textContent = property.projectOverview.launchDate;
-        document.querySelector("#overview .overview-item:nth-child(5) .value a").textContent = property.projectOverview.locality.name;
-        document.querySelector("#overview .overview-item:nth-child(6) .value").textContent = property.projectOverview.configurations;
-        document.querySelector("#overview .overview-item:nth-child(7) .value a").textContent = property.projectOverview.builder.name;
-        document.querySelector("#overview .overview-item:nth-child(8) .value").textContent = property.projectOverview.projectSize;
-        document.querySelector("#overview .overview-item:nth-child(9) .value").textContent = property.projectOverview.completionDate;
-        document.querySelector("#overview .overview-item:nth-child(10) .value").textContent = property.projectOverview.locationAdvantages.name;
-      } else if (tabId === "price-list") {
-        // Update price list table with dynamic data
-        const priceListTable = document.querySelector("#price-list table tbody");
-        priceListTable.innerHTML = "";
-        const priceListTab = property.projectAbout.tabs.find((tab) => tab.title === "Price List");
-        priceListTab.table.forEach((row) => {
-          const newRow = document.createElement("tr");
-          newRow.innerHTML = `
-            <td>${row.unitType}</td>
-            <td>${row.area}</td>
-            <td>${row.price}</td>
-          `;
-          priceListTable.appendChild(newRow);
-        });
-      } else if (tabId === "project-overview") {
-        // Update project overview tab content dynamically
-        const projectOverview = document.querySelector("#project-overview .tab-content");
-        const projectOverviewTab = property.projectAbout.tabs.find((tab) => tab.title === "Project Overview");
-        if (projectOverview && projectOverviewTab) {
-          projectOverview.innerHTML = projectOverviewTab.content;
-        }
-      }
-    })
-    .catch((error) => {
-      console.error("Error fetching or updating tab content:", error);
-    });
+  return tabData;
 }
 
-// Modified showTab function to call updateTabContent based on tab selection
-function showTab(tabId) {
+// Function to dynamically fetch and update tab content based on tabId
+async function updateTabContent(tabId, pageTitle) {
+  const data = await getTabData();
+  if (!data || !data.properties) {
+    console.error("No data available");
+    return;
+  }
+
+  const property = data.properties.find((p) => p.pageTitle === pageTitle);
+  if (!property) {
+    console.error("Property not found");
+    return;
+  }
+
+  try {
+    switch (tabId) {
+      case "overview":
+        updateOverviewTab(property);
+        break;
+      case "price-list":
+        updatePriceListTab(property);
+        break;
+      case "project-overview":
+        updateProjectOverviewTab(property);
+        break;
+      default:
+        console.warn("Unknown tab ID:", tabId);
+    }
+  } catch (error) {
+    console.error(`Error updating ${tabId} tab:`, error);
+  }
+}
+
+function updateOverviewTab(property) {
+  const overview = property.projectOverview;
+  const selectors = [
+    { selector: ":nth-child(1) .value", value: overview.status },
+    { selector: ":nth-child(2) .value", value: overview.unitSizes },
+    { selector: ":nth-child(3) .value", value: overview.totalUnits },
+    { selector: ":nth-child(4) .value", value: overview.launchDate },
+    { selector: ":nth-child(5) .value a", value: overview.locality?.name },
+    { selector: ":nth-child(6) .value", value: overview.configurations },
+    { selector: ":nth-child(7) .value a", value: overview.builder?.name },
+    { selector: ":nth-child(8) .value", value: overview.projectSize },
+    { selector: ":nth-child(9) .value", value: overview.completionDate },
+    {
+      selector: ":nth-child(10) .value",
+      value: overview.locationAdvantages?.name,
+    },
+  ];
+
+  selectors.forEach(({ selector, value }) => {
+    const element = document.querySelector(
+      `#overview .overview-item${selector}`
+    );
+    if (element) {
+      element.textContent = value || "N/A";
+    }
+  });
+}
+
+function updatePriceListTab(property) {
+  const priceListTable = document.querySelector("#price-list table tbody");
+  if (!priceListTable) return;
+
+  const priceListTab = property.projectAbout?.tabs?.find(
+    (tab) => tab.title === "Price List"
+  );
+
+  if (!priceListTab?.table) {
+    priceListTable.innerHTML =
+      "<tr><td colspan='3'>Price list not available</td></tr>";
+    return;
+  }
+
+  priceListTable.innerHTML = priceListTab.table
+    .map(
+      (row) => `
+            <tr>
+                <td>${row.unitType || "N/A"}</td>
+                <td>${row.area || "N/A"}</td>
+                <td>${row.price || "N/A"}</td>
+            </tr>
+        `
+    )
+    .join("");
+}
+
+function updateProjectOverviewTab(property) {
+  const projectOverview = document.querySelector(
+    "#project-overview .tab-content"
+  );
+  if (!projectOverview) return;
+
+  const projectOverviewTab = property.projectAbout?.tabs?.find(
+    (tab) => tab.title === "Project Overview"
+  );
+
+  if (projectOverviewTab?.content) {
+    projectOverview.innerHTML = projectOverviewTab.content;
+  } else {
+    projectOverview.innerHTML = "Project overview not available";
+  }
+}
+
+// Modified showTab function to properly handle tab switching
+async function showTab(tabId) {
+  // Hide all tab contents and remove active classes
   document.querySelectorAll(".tab-content").forEach((content) => {
     content.style.display = "none";
   });
+
   document.querySelectorAll(".tab-btn").forEach((btn) => {
     btn.classList.remove("active");
   });
-  document.getElementById(tabId).style.display = "block";
-  document.querySelector(`[data-tab="${tabId}"]`).classList.add("active");
 
-  // Fetch and update content dynamically for the selected tab
-  updateTabContent(tabId);
+  // Show selected tab content
+  const selectedTab = document.getElementById(tabId);
+  if (selectedTab) {
+    selectedTab.style.display = "block";
+  }
+
+  // Update active button
+  const activeButton = document.querySelector(`[data-tab="${tabId}"]`);
+  if (activeButton) {
+    activeButton.classList.add("active");
+  }
+
+  // Get the page title from wherever it's defined in your application
+  const pageTitle = document.querySelector("title")?.textContent || "";
+
+  // Update the tab content
+  await updateTabContent(tabId, pageTitle);
 }
-
-

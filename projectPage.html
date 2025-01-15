@@ -9,70 +9,304 @@
     content="Explore Kalpataru Bliss, a premium residential project in Mumbai. Discover project highlights, amenities, configurations, and get in touch for more details." />
   <meta name="keywords"
     content="Mahindra Happinest, Andheri, Mumbai, Residential Property, Real Estate, Flats for Sale" />
-  <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
   <link rel="stylesheet" href="css/projectPage.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
-    integrity="sha512-YWznkfwAOYWgl+AE5MBLhh6VT3yAvPLh/.MNODqCWjGx4iSMRFsTxQ4YsOyCiAgawahTsVuWqqlzkmfBShEyw=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
   <!-- Header Section -->
   <header>
     <div class="containerImg">
-      <img loading="lazy" src="./project images/krusumi.jpg" alt="Main Property Image" />
+      <img src="./project images/krusumi.jpg" alt="Main Property Image" />
       <div>
         <h1>Kalpataru Bliss</h1>
         <p>Andheri, Mumbai</p>
       </div>
       <div class="companyLogo">
-        <img loading="lazy" src="img/logo-1.webp" alt="" />
+        <!-- <img src="img/logo-1.jpeg" alt="" /> -->
       </div>
     </div>
         
   </header>
 
-  <!-- Main Property Section -->
-  <section id="property-gallery">
-    <!-- Left: Main Image with Badges -->
-    <div class="main-image">
-      <img loading="lazy" src="./project images/krusumi.jpg" alt="Main Property Image" />
+  <section id="property-gallery" class="container">
+    <div class="slider-container">
+      <!-- Main Image -->
+      <div class="main-image">
+        <img src="" alt="Main Property Image" id="mainImage" />
+        <button class="nav-btn prev-btn" id="prevButton">&#10094;</button>
+        <button class="nav-btn next-btn" id="nextButton">&#10095;</button>
+      </div>
 
-      <!-- Right: Additional Images and Virtual Tour -->
-      <div class="additional-images" id="additionalImagesContainer">
-        <div class="image-item">
-          <img loading="lazy" src="https://via.placeholder.com/150x100" alt="Image 1" />
-        </div>
-        <div class="image-item">
-          <img loading="lazy" src="https://via.placeholder.com/150x100" alt="Image 2" />
-        </div>
-        <div class="image-item more-photos">+16 Photos</div>
-        <div class="image-item">
-          <img loading="lazy" src="https://via.placeholder.com/150x100" alt="Virtual Tour" />
-          <span class="overlay-text">Virtual Tour</span>
-        </div>
-        <div class="image-item">
-          <img loading="lazy" src="https://via.placeholder.com/150x100" alt="Video" />
-          <span class="overlay-text">Video</span>
-        </div>
-      </div>
-    </div>
-    <div class="bottom-badges-container">
-      <div class="buttons">
-        <!-- <button class="btn"><i class="fas fa-heart"></i> Shortlist</button>
-        <button class="btn"><i class="fas fa-share-alt"></i> Share</button> -->
-      </div>
-      <div class="bottom-badges">
-        <span class="badge exclusive">SY</span>
-        <span class="badge exclusive">Exclusive</span>
-        <span class="badge assured">Square Assured</span>
-        <span class="badge rera">RERA Registered</span>
-        <span class="badge residential">Residential</span>
-      </div>
+      <!-- Thumbnails -->
+      <div class="thumbnail-container" id="thumbnailContainer"></div>
     </div>
   </section>
+  <style>
+    #property-gallery {
+      background: #e1f0ff;
+      padding: 20px 0;
+      border-radius: 10px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    }
 
+    .slider-container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 15px;
+    }
+
+    .main-image {
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+      position: relative;
+      width: 100%;
+      height: 400px;
+      overflow: hidden;
+      border-radius: 12px;
+      margin-bottom: 18px;
+    }
+
+    .thumbnail {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .thumbnail:hover {
+      transform: scale(1.4);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    }
+
+    .main-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: opacity 0.3s ease;
+    }
+
+    .nav-btn {
+      background: linear-gradient(135deg, #007bff, #0056b3);
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(0, 0, 0, 0.5);
+      color: white;
+      border: none;
+      padding: 15px;
+      cursor: pointer;
+      border-radius: 50%;
+      font-size: 18px;
+      transition: background-color 0.3s ease;
+      z-index: 10;
+    }
+
+    .thumbnail.active {
+      border-color: #007bff;
+      box-shadow: 0 0 10px rgba(0, 123, 255, 0.7);
+    }
+
+    .nav-btn:hover {
+      background: rgba(0, 0, 0, 0.8);
+    }
+
+    .prev-btn {
+      left: 20px;
+    }
+
+    .next-btn {
+      right: 20px;
+    }
+
+    .thumbnail-container {
+      display: flex;
+      gap: 10px;
+      overflow-x: auto;
+      padding: 10px 0;
+      scrollbar-width: thin;
+    }
+
+    .thumbnail {
+      width: 120px;
+      height: 80px;
+      cursor: pointer;
+      border-radius: 4px;
+      overflow: hidden;
+      flex-shrink: 0;
+      border: 2px solid transparent;
+      transition: border-color 0.3s ease;
+      position: relative;
+    }
+
+    .thumbnail img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .thumbnail.active {
+      border-color: #2196f3;
+    }
+
+    .overlay-text {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: rgba(0, 0, 0, 0.7);
+      color: white;
+      padding: 4px;
+      font-size: 12px;
+      text-align: center;
+    }
+
+    @media (max-width: 768px) {
+      .main-image {
+        height: 300px;
+      }
+
+      .thumbnail {
+        width: 80px;
+        height: 60px;
+      }
+
+      .nav-btn {
+        padding: 10px;
+        font-size: 16px;
+      }
+    }
+  </style>
+  <script>
+    class ImageSlider {
+      constructor() {
+        this.mainImage = document.getElementById("mainImage");
+        this.prevButton = document.getElementById("prevButton");
+        this.nextButton = document.getElementById("nextButton");
+        this.thumbnailContainer =
+          document.getElementById("thumbnailContainer");
+        this.images = [];
+        this.currentIndex = 0;
+
+        this.init();
+      }
+      async init() {
+        try {
+          const response = await fetch("data.json");
+          const data = await response.json();
+
+          // Get pageTitle from URL parameter
+          const pageTitle = getParameterByName("pageTitle");
+
+          // Find the correct property
+          const property = data.properties.find(
+            (p) => p.pageTitle === pageTitle
+          );
+
+          if (!property) {
+            console.error("Property not found");
+            return;
+          }
+
+          // Get images from the property's gallery
+          const propertyGallery = property.propertyGallery;
+          this.images = [propertyGallery.mainImage];
+
+          // Process additional images
+          propertyGallery.additionalImages.forEach((item) => {
+            if (typeof item === "string") {
+              this.images.push(item);
+            } else if (item.image) {
+              this.images.push({
+                src: item.image,
+                overlayText: item.overlayText || "",
+              });
+            }
+          });
+
+          // Set initial main image
+          this.updateMainImage();
+
+          // Create thumbnails
+          this.createThumbnails();
+
+          // Add event listeners
+          this.addEventListeners();
+        } catch (error) {
+          console.error("Error loading images:", error);
+        }
+      }
+
+      updateMainImage() {
+        const currentImage = this.images[this.currentIndex];
+        this.mainImage.src =
+          typeof currentImage === "string" ? currentImage : currentImage.src;
+
+        // Update active thumbnail
+        const thumbnails =
+          this.thumbnailContainer.querySelectorAll(".thumbnail");
+        thumbnails.forEach((thumb, index) => {
+          thumb.classList.toggle("active", index === this.currentIndex);
+        });
+      }
+
+      createThumbnails() {
+        this.thumbnailContainer.innerHTML = "";
+
+        this.images.forEach((image, index) => {
+          const thumbnail = document.createElement("div");
+          thumbnail.className = `thumbnail ${index === this.currentIndex ? "active" : ""
+            }`;
+
+          const img = document.createElement("img");
+          img.src = typeof image === "string" ? image : image.src;
+          img.alt = `Thumbnail ${index + 1}`;
+
+          thumbnail.appendChild(img);
+
+          // Add overlay text if present
+          if (typeof image === "object" && image.overlayText) {
+            const overlay = document.createElement("div");
+            overlay.className = "overlay-text";
+            overlay.textContent = image.overlayText;
+            thumbnail.appendChild(overlay);
+          }
+
+          this.thumbnailContainer.appendChild(thumbnail);
+
+          // Add click event
+          thumbnail.addEventListener("click", () => {
+            this.currentIndex = index;
+            this.updateMainImage();
+          });
+        });
+      }
+
+      addEventListeners() {
+        this.prevButton.addEventListener("click", () => {
+          this.currentIndex =
+            (this.currentIndex - 1 + this.images.length) % this.images.length;
+          this.updateMainImage();
+        });
+
+        this.nextButton.addEventListener("click", () => {
+          this.currentIndex = (this.currentIndex + 1) % this.images.length;
+          this.updateMainImage();
+        });
+
+        // Keyboard navigation
+        document.addEventListener("keydown", (e) => {
+          if (e.key === "ArrowLeft") {
+            this.prevButton.click();
+          } else if (e.key === "ArrowRight") {
+            this.nextButton.click();
+          }
+        });
+      }
+    }
+
+    // Initialize the slider when the document is loaded
+    document.addEventListener("DOMContentLoaded", () => {
+      new ImageSlider();
+    });
+  </script>
+  <!-- Main Property Section -->
   <div class="navContainer">
     <nav class="nav-bar">
       <a href="https://kprimus.in/">Home</a>
@@ -90,39 +324,23 @@
   <section id="project-about" class="container">
     <!-- Project Description with Tabs -->
     <div class="project-header">
-      <h2>About </h2>
-      <a href="#" class="download-btn"><i class="fas fa-file-download"></i> Download Brochure</a>
+      <h2>About</h2>
     </div>
 
     <div class="tabs">
       <button class="tab-btn active" onclick="showTab('project-overview')" style="font-size: 1.3rem">
         Project Overview
       </button>
-      <button class="tab-btn2 active " onclick="showTab('price-list') " style="font-size: 1.3rem">
+      <button class="tab-btn2 active" onclick="showTab('price-list') " style="font-size: 1.3rem">
         Price List
       </button>
-
     </div>
 
     <div class="tab-content" id="project-overview">
-      <p>
-        <!-- Kalpataru Bliss Project 2 is a beautiful project by Mahindra
-          Lifespaces, one of the renowned developers in Mumbai. Located in -->
-
-      </p>
-      <!-- <a href="#" class="more-info-btn"
-          >More About Kalpataru Bliss Project 2</a
-        > -->
-
-      <!-- <div class="question-box">
-        <p>
-          What’s on your mind? Ask and get answers from our Property Experts
-        </p>
-        <button class="ask-btn">Ask Question</button>
-      </div> -->
+      <p></p>
     </div>
 
-    <div class="tab-content" id="price-list" style="display:none" ;>
+    <div class="tab-content" id="price-list" style="display: none" ;>
       <table class="price-table">
         <thead>
           <tr>
@@ -165,7 +383,7 @@
           <tr>
             <td>774 Sq. Ft. Retail Shop</td>
             <td>774 Sq. Ft. (Carpet)</td>
-            <td> L</td>
+            <td>L</td>
           </tr>
         </tbody>
       </table>
@@ -289,73 +507,6 @@
     </div>
   </section>
 
-  <!-- Configurations Section -->
-  <!-- <section id="configurations" class="container">
-      <h2>Available Configurations</h2>
-      <div class="configurations-list">
-        <div class="configuration">
-          <h3>1 BHK Apartments</h3>
-          <p><strong>Area:</strong> 350 - 400 Sq. Ft</p>
-          <p><strong>Price:</strong> ₹15 Lakhs - ₹18 Lakhs</p>
-        </div>
-        <div class="configuration">
-          <h3>2 BHK Apartments</h3>
-          <p><strong>Area:</strong> 500 - 600 Sq. Ft</p>
-          <p><strong>Price:</strong> ₹20 Lakhs - ₹25 Lakhs</p>
-        </div>
-      </div>
-    </section> -->
-
-  <!-- Contact Section -->
-  <!-- <section id="contact" class="container">
-      <h2>Contact Us</h2>
-      <p>
-        If you're interested in learning more about Kalpataru Bliss
-        or would like to schedule a site visit, please fill out the form below:
-      </p>
-      <form action="submit_enquiry.php" method="POST">
-        <div class="form-group">
-          <label for="name">Name:</label>
-          <input
-            type="text"
-            id="name"
-            name="name"
-            required
-            placeholder="Enter your name"
-          />
-        </div>
-        <div class="form-group">
-          <label for="phone">Phone:</label>
-          <input
-            type="tel"
-            id="phone"
-            name="phone"
-            required
-            placeholder="Enter your phone number"
-          />
-        </div>
-        <div class="form-group">
-          <label for="email">Email:</label>
-          <input
-            type="email"
-            id="email"
-            name="email"
-            required
-            placeholder="Enter your email"
-          />
-        </div>
-        <div class="form-group">
-          <label for="message">Message:</label>
-          <textarea
-            id="message"
-            name="message"
-            placeholder="Enter your message"
-          ></textarea>
-        </div>
-        <button type="submit" class="btn-submit">Send Enquiry</button>
-      </form>
-    </section> -->
-
   <!-- Footer Section -->
   <footer>
     <div>
@@ -370,13 +521,8 @@
 
   <!-- JavaScript & External Scripts -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/js/all.min.js"></script>
-  <!-- <body> -->
-  <!-- Existing HTML content of your projectPage.html -->
 
-  <!-- Add this script before the closing </body> tag -->
   <script>
-    // const totalUnits = property.projectOverview.totalUnits;
-
     // Utility function to get URL parameters
     function getParameterByName(name, url = window.location.href) {
       name = name.replace(/[\[\]]/g, "\\$&");
@@ -404,35 +550,58 @@
             property.header.mainImage;
           document.querySelector(".containerImg h1").innerText =
             property.header.title;
-          document.querySelector('.containerImg p').innerText = property.header.location;
+          document.querySelector(".containerImg p").innerText =
+            property.header.location;
 
           // Update project overview section
-          document.querySelector('#overview .overview-item:nth-child(1) .value').textContent = property.projectOverview.status;
-          document.querySelector('#overview .overview-item:nth-child(2) .value').textContent = property.projectOverview.unitSizes;
-          document.querySelector('#overview .overview-item:nth-child(3) .value').textContent = property.projectOverview.totalUnits;
-          document.querySelector('#overview .overview-item:nth-child(4) .value').textContent = property.projectOverview.launchDate;
-          document.querySelector('#overview .overview-item:nth-child(5) .value a').textContent = property.projectOverview.locality.name;
-          document.querySelector('#overview .overview-item:nth-child(6) .value').textContent = property.projectOverview.configurations;
-          document.querySelector('#overview .overview-item:nth-child(7) .value a').textContent = property.projectOverview.builder.name;
-          document.querySelector("#overview .overview-item:nth-child(8) .value").textContent = property.projectOverview.projectSize;
-          document.querySelector("#overview .overview-item:nth-child(9) .value").textContent = property.projectOverview.completionDate;
-          document.querySelector("#overview .overview-item:nth-child(10) .value").textContent = property.projectOverview.locationAdvantages.name;
+          document.querySelector(
+            "#overview .overview-item:nth-child(1) .value"
+          ).textContent = property.projectOverview.status;
+          document.querySelector(
+            "#overview .overview-item:nth-child(2) .value"
+          ).textContent = property.projectOverview.unitSizes;
+          document.querySelector(
+            "#overview .overview-item:nth-child(3) .value"
+          ).textContent = property.projectOverview.totalUnits;
+          document.querySelector(
+            "#overview .overview-item:nth-child(4) .value"
+          ).textContent = property.projectOverview.launchDate;
+          document.querySelector(
+            "#overview .overview-item:nth-child(5) .value a"
+          ).textContent = property.projectOverview.locality.name;
+          document.querySelector(
+            "#overview .overview-item:nth-child(6) .value"
+          ).textContent = property.projectOverview.configurations;
+          document.querySelector(
+            "#overview .overview-item:nth-child(7) .value a"
+          ).textContent = property.projectOverview.builder.name;
+          document.querySelector(
+            "#overview .overview-item:nth-child(8) .value"
+          ).textContent = property.projectOverview.projectSize;
+          document.querySelector(
+            "#overview .overview-item:nth-child(9) .value"
+          ).textContent = property.projectOverview.completionDate;
+          document.querySelector(
+            "#overview .overview-item:nth-child(10) .value"
+          ).textContent = property.projectOverview.locationAdvantages.name;
           // document.querySelector('#configurations.content').textContent = configurations.builder.name;  // Adjust selector if needed
 
-
-
           // Update price list table with dynamic data
-          const priceListTable = document.querySelector('#price-list table tbody');
-          priceListTable.innerHTML = '';
-          property.projectAbout.tabs.find(tab => tab.title === 'Price List').table.forEach(row => {
-            const newRow = document.createElement('tr');
-            newRow.innerHTML = `
-          <td>${row.unitType}</td>
-          <td>${row.area}</td>
-          <td>${row.price}</td>
-        `;
-            priceListTable.appendChild(newRow);
-          });
+          const priceListTable = document.querySelector(
+            "#price-list table tbody"
+          );
+          priceListTable.innerHTML = "";
+          property.projectAbout.tabs
+            .find((tab) => tab.title === "Price List")
+            .table.forEach((row) => {
+              const newRow = document.createElement("tr");
+              newRow.innerHTML = `
+            <td>${row.unitType}</td>
+            <td>${row.area}</td>
+            <td>${row.price}</td>
+          `;
+              priceListTable.appendChild(newRow);
+            });
           //update  project overview table
           const projectOverview = document.querySelector(
             "#project-about .tab-content"
@@ -454,75 +623,12 @@
               "#project-about .tab-content element not found in the DOM."
             );
           }
-
-          // document.querySelector('#project-overview.tab-content').innerHTML = projectDescription;
-
-
-          // // Access the main image from propertyGallery
-          const mainImageSrc = property.propertyGallery.mainImage;
-          // Accessing additional images
-          const additionalImages =
-            property.propertyGallery.additionalImages;
-          document.querySelector(".main-image img").src = mainImageSrc;
-          // Create image elements and populate the container
-          const imageContainer = document.getElementById(
-            "additionalImagesContainer"
-          );
-          imageContainer.innerHTML = ""; // Clear any existing content
-
-          additionalImages.forEach((image) => {
-            const imageElement = document.createElement("div");
-            imageElement.classList.add("image-item");
-
-            if (typeof image === "string") {
-              // Handle string image URLs
-              imageElement.innerHTML = `
-            <img loading="lazy"  src="${image}" alt="Additional Image" />
-          `;
-            } else if (
-              typeof image === "object" &&
-              image.hasOwnProperty("image")
-            ) {
-              // Handle image objects with overlay text
-              imageElement.innerHTML = `
-            <img loading="lazy"  src="${image.image}" alt="${image.alt || "Additional Image"
-                }" />
-            <span class="overlay-text">${image.overlayText}</span>
-          `;
-            }
-
-            imageContainer.appendChild(imageElement);
-          });
         } else {
           console.error("Property not found for pageTitle:", pageTitle);
         }
       })
       .catch((error) => console.error("Error loading data:", error));
-    // fetch('data.json')  // Update this path as needed
-    //     .then(response => response.json())
-    //     .then(data => {
-    //         // Find the property by `pageTitle`
-    //         const property = data.properties.find(p => p.pageTitle === pageTitle);
-    //         if (property) {
-    //           console.log("Property  found for pageTitle:", property);
-    //             // Update page content with data from JSON
-    //             document.title = property.pageTitle;
-    //             document.querySelector('.containerImg img').src = property.header.mainImage;
-    //             // document.querySelector('.containerImg img').src = property.propertyGallery.additionalImages;
-
-    //             document.querySelector('.containerImg h1').innerText = property.header.title;
-    //             document.querySelector('.containerImg p').innerText = property.header.location;
-
-    //             // Populate the "About" section
-    //             document.querySelector('#project-about h2').innerText = property.projectAbout.title;
-    //             document.querySelector('#project-about p').innerText = property.projectAbout.description;
-    //         } else {
-    //             console.error("Property not found for pageTitle:", pageTitle);
-    //         }
-    //     })
-    //     .catch(error => console.error('Error loading data:', error));
   </script>
-  <!-- </body> -->
 </body>
 
 </html>
