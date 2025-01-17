@@ -151,9 +151,9 @@
                     </div> -->
 
                     <div class="menuNav__item">
-                        <a href="#testimonials">
-                            Testimonials
-                        </a>
+                <a href="blog.html" onclick="window.location.href='blog.html'; return false;">
+                    Daily News
+                </a>
                     </div>
 
                     <div class="menuNav__item">
@@ -1604,6 +1604,26 @@
                 nextEl: ".swiper-button-next",
                 prevEl: ".swiper-button-prev",
             },
+        });
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const dailyNewsLink = document.querySelector('.menuNav__item a[href="blog.html"]');
+            if (dailyNewsLink) {
+                dailyNewsLink.addEventListener('click', function (e) {
+                    e.stopPropagation(); // Prevent event from bubbling up
+                });
+            }
+        });
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const dailyNewsLink = document.querySelector('.menuNav__item a[href="blog.html"]');
+            if (dailyNewsLink) {
+                dailyNewsLink.addEventListener('click', function (e) {
+                    e.stopPropagation(); // Prevent event from bubbling up
+                });
+            }
         });
     </script>
 </body>

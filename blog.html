@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Housing Headlines</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+            --accent-color: #e74c3c;
+            --background-color: #ecf0f1;
+            --text-color: #34495e;
+            --card-background: #ffffff;
+            --card-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            --card-hover-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--background-color);
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 1rem;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+animated-heading {
+      text-align: center;
+      margin-bottom: 2rem;
+      color: #2c3e50;
+      font-size: 2.1rem;
+      font-weight: 600;
+      overflow: hidden;
+       letter-spacing: -8px;
+    }
+
+    .animated-heading span {
+      display: inline-block;
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeInUp 0.5s forwards;
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Add different delays for each letter */
+    .animated-heading span:nth-child(1) { animation-delay: 0.1s; }
+    .animated-heading span:nth-child(2) { animation-delay: 0.2s; }
+    .animated-heading span:nth-child(3) { animation-delay: 0.3s; }
+    .animated-heading span:nth-child(4) { animation-delay: 0.4s; }
+    .animated-heading span:nth-child(5) { animation-delay: 0.5s; }
+    .animated-heading span:nth-child(6) { animation-delay: 0.6s; }
+    .animated-heading span:nth-child(7) { animation-delay: 0.7s; }
+    .animated-heading span:nth-child(8) { animation-delay: 0.8s; }
+    .animated-heading span:nth-child(9) { animation-delay: 0.9s; }
+    .animated-heading span:nth-child(10) { animation-delay: 1.0s; }
+    .animated-heading span:nth-child(11) { animation-delay: 1.1s; }
+    .animated-heading span:nth-child(12) { animation-delay: 1.2s; }
+    .animated-heading span:nth-child(13) { animation-delay: 1.3s; }
+    .animated-heading span:nth-child(14) { animation-delay: 1.4s; }
+    .animated-heading span:nth-child(15) { animation-delay: 1.5s; }
+    .animated-heading span:nth-child(16) { animation-delay: 1.6s; }
+    .animated-heading span:nth-child(17) { animation-delay: 1.7s; }
+    .animated-heading span:nth-child(18) { animation-delay: 1.8s; }
+    .animated-heading span:nth-child(19) { animation-delay: 1.9s; }
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+
+        nav {
+            display: flex;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            margin: 0 0.5rem;
+            border-radius: 5px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        nav a:hover {
+            background-color: var(--secondary-color);
+            color: var(--primary-color);
+        }
+
+        main {
+            flex: 1;
+            padding: 6rem 2rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            width: 100%;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 2rem;
+            color: var(--primary-color);
+            font-size: 2.5rem;
+            font-weight: 600;
+        }
+
+        .news-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .news-card {
+            border: none;
+            border-radius: 15px;
+            overflow: hidden;
+            background-color: var(--card-background);
+            box-shadow: var(--card-shadow);
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .news-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--card-hover-shadow);
+        }
+
+        .news-card-image {
+            height: 200px;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+
+        .news-card-category {
+            position: absolute;
+            top: 1rem;
+            left: 1rem;
+            background-color: var(--accent-color);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+
+        .news-card-content {
+            padding: 1.5rem;
+        }
+
+        .news-title {
+            font-size: 1.2em;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: var(--primary-color);
+        }
+
+        .news-date {
+            font-size: 0.9em;
+            color: var(--secondary-color);
+            margin-bottom: 0.5rem;
+            font-weight: 300;
+        }
+
+        .news-excerpt {
+            font-size: 1em;
+            color: var(--text-color);
+            margin-bottom: 1rem;
+        }
+
+        .read-more {
+            color: var(--secondary-color);
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            transition: color 0.3s ease;
+        }
+
+        .read-more:hover {
+            color: var(--accent-color);
+        }
+
+        .read-more i {
+            margin-left: 0.5rem;
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1001;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.6);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .modal.show {
+            opacity: 1;
+        }
+
+        .modal-content {
+            background-color: var(--card-background);
+            margin: 10% auto;
+            padding: 2rem;
+            border: none;
+            width: 90%;
+            max-width: 700px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transform: scale(0.7);
+            opacity: 0;
+            transition: all 0.3s ease;
+        }
+
+        .modal.show .modal-content {
+            transform: scale(1);
+            opacity: 1;
+        }
+
+        .close {
+            color: var(--secondary-color);
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: var(--accent-color);
+        }
+
+        .modal-title {
+            color: var(--primary-color);
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+        }
+
+        .modal-date {
+            color: var(--secondary-color);
+            font-size: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .modal-body {
+            color: var(--text-color);
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+        }
+
+        .social-share {
+            margin-top: 1rem;
+            display: flex;
+            justify-content: flex-end;
+            gap: 1rem;
+        }
+
+        .social-share a {
+            color: var(--secondary-color);
+            font-size: 1.5rem;
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+
+        .social-share a:hover {
+            color: var(--accent-color);
+            transform: scale(1.1);
+        }
+
+        footer {
+            background-color: var(--primary-color);
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            margin-top: 2rem;
+        }
+
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            main h1{
+                font-size: 2rem;
+             margin-top: 2.5rem;
+            }
+            nav {
+                margin-top: 0.1rem;
+            }
+
+            .news-grid {
+                grid-template-columns: 1fr;
+            }
+          .modal-content {
+                width: 95%;
+                margin: 5% auto;
+            }
+            .animated-heading {
+        font-size: 1.8rem;
+        letter-spacing: -0.5px;
+        margin-top: 2.5rem;
+      }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="header-content">
+            <div class="logo">Real Estate Daily News</div>
+            <nav>
+                <a href="https://kprimus.in/">Home</a>
+                <a href="https://wa.me/919090313161?text=Your message is important to us. Thank you for getting in touch.!%20%20%20%20%20">Reach Us</a>
+
+            </nav>
+        </div>
+    </header>
+<main id="home">
+    <h1 class="animated-heading">
+        <span>L</span>
+        <span>a</span>
+        <span>t</span>
+        <span>e</span>
+        <span>s</span>
+        <span>t</span>
+        <span>&nbsp;</span>
+        <span>R</span>
+        <span>e</span>
+        <span>a</span>
+        <span>l</span>
+        <span>&nbsp;</span>
+        <span>E</span>
+        <span>s</span>
+        <span>t</span>
+        <span>a</span>
+        <span>t</span>
+        <span>e</span>
+        <span>&nbsp;</span>
+        <span>N</span>
+        <span>e</span>
+        <span>w</span>
+        <span>s</span>
+    </h1>
+    <div id="newsGrid" class="news-grid"></div>
+</main>
+    <!-- <main id="home">
+        <h1>Latest Real Estate News</h1>
+        <div id="newsGrid" class="news-grid"></div>
+    </main> -->
+
+    <div id="newsModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2 id="modalTitle" class="modal-title"></h2>
+            <p id="modalDate" class="modal-date"></p>
+            <div id="modalContent" class="modal-body"></div>
+            <div class="social-share">
+                <a href="#" id="shareWhatsApp" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                <a href="#" id="shareFacebook" target="_blank"><i class="fab fa-facebook"></i></a>
+                <a href="#" id="shareLinkedIn" target="_blank"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 K Primus RealTech Pvt Ltd</p>
+    </footer>
+<script src="js/main.js"></script>
+
+    <script>
+        const newsData = [
+            {
+                id: 1,
+                "title": "Gurugram's Real Estate Revolution",
+                    "content": "The Gurugram real estate market is experiencing significant changes in 2025, driven by evolving buyer preferences and the rise of branded residences. The city is positioning itself as a hub for both luxury living and affordable housing. High-end properties are becoming increasingly popular as homebuyers seek luxurious living with state-of-the-art amenities and advanced technology. Mr. Adil Altaf, Managing Director of Trinity Infratech, highlights that branded residences, developed in partnership with globally recognized brands, offer an unmatched lifestyle experience, providing both quality construction and timely delivery. However, the availability of prime land in key locations is limited, presenting an opportunity for investors to see substantial returns as demand for high-quality properties outpaces supply. As the real estate landscape in Gurugram continues to evolve, both homebuyers and investors are poised to benefit from this dynamic market.",
+
+                date: "2025-01-16",
+                category: "Market Trends",
+                image: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1073&q=80"
+            },
+            {
+                id: 2,
+                title: "New Sustainable Housing Development Announced",
+                content: "A major real estate developer has announced plans for a new eco-friendly housing development. The project will feature solar panels, rainwater harvesting systems, and energy-efficient appliances in all units. This innovative approach to residential construction aims to reduce the carbon footprint of urban living while providing modern, comfortable homes. The development is expected to break ground next month and will include a mix of apartments and townhouses to cater to diverse housing needs.",
+                date: "2025-01-16",
+                category: "Development",
+                image: "https://images.unsplash.com/photo-1449844908441-8829872d2607?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+            },
+            {
+                id: 3,
+                title: "Commercial Real Estate Sector Adapts to Remote Work Trends",
+                content: "As more companies embrace remote and hybrid work models, the commercial real estate sector is adapting. Many office buildings are being repurposed into mixed-use spaces, combining work areas with residential and retail units. This shift reflects changing attitudes towards work-life balance and the need for flexible urban spaces. Some developers are also exploring the concept of 'neighborhood workspaces' - small, distributed office hubs that allow employees to work closer to home while maintaining a professional environment.",
+                date: "2025-01-16",
+                category: "Commercial",
+                image: "https://images.unsplash.com/photo-1497366216548-37526070297c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1169&q=80"
+            }
+        ];
+
+        const newsGrid = document.getElementById('newsGrid');
+        const modal = document.getElementById('newsModal');
+        const modalTitle = document.getElementById('modalTitle');
+        const modalDate = document.getElementById('modalDate');
+        const modalContent = document.getElementById('modalContent');
+        const closeBtn = document.getElementsByClassName('close')[0];
+        const shareWhatsApp = document.getElementById('shareWhatsApp');
+        const shareFacebook = document.getElementById('shareFacebook');
+        const shareLinkedIn = document.getElementById('shareLinkedIn');
+
+        function createNewsCard(newsItem) {
+            const card = document.createElement('div');
+            card.className = 'news-card';
+            card.innerHTML = `
+                <div class="news-card-image" style="background-image: url('${newsItem.image}')">
+                    <span class="news-card-category">${newsItem.category}</span>
+                </div>
+                <div class="news-card-content">
+                    <h3 class="news-title">${newsItem.title}</h3>
+                    <p class="news-date">${newsItem.date}</p>
+                    <p class="news-excerpt">${newsItem.content.substring(0, 100)}...</p>
+                    <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                </div>
+            `;
+            card.querySelector('.read-more').addEventListener('click', (e) => {
+                e.preventDefault();
+                showModal(newsItem);
+            });
+            return card;
+        }
+
+        function showModal(newsItem) {
+            modalTitle.textContent = newsItem.title;
+            modalDate.textContent = newsItem.date;
+            modalContent.textContent = newsItem.content;
+
+            const shareUrl = encodeURIComponent(window.location.href);
+            const shareText = encodeURIComponent(`Check out this real estate news: ${newsItem.title}`);
+
+            shareWhatsApp.href = `https://api.whatsapp.com/send?text=${shareText}%20${shareUrl}`;
+            shareFacebook.href = `https://www.facebook.com/sharer/sharer.php?u=${shareUrl}`;
+            shareLinkedIn.href = `https://www.linkedin.com/shareArticle?mini=true&url=${shareUrl}&title=${encodeURIComponent(newsItem.title)}`;
+
+            modal.style.display = 'block';
+            setTimeout(() => {
+                modal.classList.add('show');
+            }, 10);
+        }
+
+        function closeModal() {
+            modal.classList.remove('show');
+            setTimeout(() => {
+                modal.style.display = 'none';
+            }, 300);
+        }
+
+        closeBtn.onclick = closeModal;
+
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                closeModal();
+            }
+        }
+
+        newsData.forEach(newsItem => {
+            newsGrid.appendChild(createNewsCard(newsItem));
+        });
+
+      
+        
+    </script>
+</body>
+
+</html>
